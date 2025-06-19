@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Logs
+*.log
+log/
+logs/
+
+# Data files
+data/
+*.csv
+*.xlsx
+*.json
+
+# Credentials and sensitive files
+.env
+*.keys.json
+*credentials*.json
+oauth-keys.json
+gcp-oauth.keys.json
+.gdrive-server-credentials.json
+config.json
+
+# Reports
+reports/*.html
+reports/*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+backup/
+
+# N8N workflows (may contain sensitive data)
+n8n/credentials/
+n8n/backups/
+
+# Temporary files
+*.tmp
+temp/
