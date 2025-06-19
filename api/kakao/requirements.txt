@@ -1,0 +1,17 @@
+# 카카오톡 챗봇 필수 패키지
+flask==2.3.3
+requests==2.31.0
+python-dotenv==1.0.0
+
+# 데이터베이스 및 로깅
+sqlite3
+logging
+
+# 날짜/시간 처리
+datetime
+
+# JSON 처리 (내장)
+json
+
+# 타입 힌팅 (내장)
+typing
