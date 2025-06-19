@@ -1,0 +1,117 @@
+{
+  "name": "Bithumb Campaign Automation",
+  "nodes": [
+    {
+      "id": "1",
+      "type": "n8n-nodes-base.schedule",
+      "name": "Daily Schedule",
+      "position": [250, 300],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "2", 
+      "type": "n8n-nodes-base.executeCommand",
+      "name": "Generate Content",
+      "position": [450, 300],
+      "parameters": {
+        "command": "python C:/bithumb-campaign/automation/content_generator.py"
+      }
+    },
+    {
+      "id": "3",
+      "type": "n8n-nodes-base.httpRequest",
+      "name": "Post to Blog",
+      "position": [650, 200],
+      "parameters": {
+        "url": "https://blog.naver.com/api/post",
+        "method": "POST",
+        "authentication": "oAuth2"
+      }
+    },
+    {
+      "id": "4",
+      "type": "n8n-nodes-base.slack",
+      "name": "Send Report",
+      "position": [850, 300],
+      "parameters": {
+        "channel": "#bithumb-campaign",
+        "text": "=== 자동 포스팅 완료 ===\n플랫폼: {{$node[\"Generate Content\"].json[\"platform\"]}}\n제목: {{$node[\"Generate Content\"].json[\"title\"]}}\n상태: 성공"
+      }
+    },
+    {
+      "id": "5",
+      "type": "n8n-nodes-base.executeCommand", 
+      "name": "Daily Report",
+      "position": [450, 400],
+      "parameters": {
+        "command": "python C:/bithumb-campaign/automation/campaign_dashboard.py"
+      }
+    }
+  ],
+  "connections": {
+    "Daily Schedule": {
+      "main": [
+        [
+          {
+            "node": "Generate Content",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Daily Report",
+            "type": "main", 
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Content": {
+      "main": [
+        [
+          {
+            "node": "Post to Blog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post to Blog": {
+      "main": [
+        [
+          {
+            "node": "Send Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily Report": {
+      "main": [
+        [
+          {
+            "node": "Send Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "timezone": "Asia/Seoul"
+  }
+}
