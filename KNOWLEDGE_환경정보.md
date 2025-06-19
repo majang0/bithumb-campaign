@@ -42,13 +42,36 @@
 
 ## MCP (Model Context Protocol) 설정
 - **설정 파일**: `C:\bithumb-campaign\mcp_full_config.json`
-- **활성화된 MCP 서버**:
-  - filesystem (로컬 파일 접근)
-  - sequential-thinking (사고 과정 도구)
-  - sqlite (데이터베이스)
-  - github (GitHub 연동)
-  - brave-search (웹 검색) - API 키 미설정
-  - slack - 미설정
+- **Claude Desktop 설정**: Developer > Edit Config에서 설정
+
+### 활성화된 MCP 서버
+1. **filesystem** 
+   - 로컬 파일 접근
+   - 경로: `C:\bithumb-campaign`
+   
+2. **sequential-thinking**
+   - 사고 과정 도구
+   - 복잡한 문제 해결용
+   
+3. **sqlite**
+   - 데이터베이스 관리
+   - DB 경로: `C:\bithumb-campaign\data\campaign.db`
+   
+4. **github** ✅ 연동 완료
+   - GitHub 저장소 관리
+   - Personal Access Token 설정됨
+   
+5. **brave-search** ✅ 연동 완료
+   - 웹 검색 기능
+   - 월 2,000회 무료 검색
+   - API 키 설정됨
+   
+6. **slack** ✅ 연동 완료
+   - 팀 커뮤니케이션
+   - 알림 및 리포트 전송
+   - Bot Token 및 Team ID 설정됨
+   - 워크스페이스: 새-워크스페이스
+   - 봇 이름: Bithumb Campaign Bot
 
 ## 프로젝트 구조
 ```
@@ -88,7 +111,7 @@ C:\bithumb-campaign\
    - Telegram Bot API
    - Twitter API
    - 네이버 블로그 API
-   - Brave Search API
+   - ~~Brave Search API~~ ✅ 완료
 
 2. **자동화 워크플로우**
    - n8n 설정 및 워크플로우 구성
@@ -104,6 +127,19 @@ C:\bithumb-campaign\
 - Google Drive는 콘텐츠와 리포트 백업용으로 사용
 - 민감한 정보는 절대 GitHub에 커밋하지 않음
 - 정기적으로 데이터베이스 백업 수행
+
+## 프로젝트 진행 상황 (2025-06-19 기준)
+### 완료된 작업
+- ✅ GitHub 저장소 생성 및 연동
+- ✅ GitHub MCP 설정 완료
+- ✅ Brave Search API 연동 완료
+- ✅ Slack 연동 완료 (Bot 및 워크스페이스 설정)
+- ✅ Knowledge 문서 생성 및 GitHub 커밋
+
+### 진행 예정
+- ⏳ 콘텐츠 생성 시스템 구축
+- ⏳ 자동화 워크플로우 설정
+- ⏳ 성과 추적 데이터베이스 구현
 
 ## 연락처 및 관리자
 - **프로젝트 관리자**: 마장 (majang0)
