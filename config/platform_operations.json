@@ -1,0 +1,88 @@
+{
+  "cameleon_protocol_v3": {
+    "version": "3.0",
+    "last_updated": "2025-06-21",
+    "goal": "1000 referrals",
+    "strategy": "anchor-satellite hybrid model"
+  },
+  "anchor_platforms": {
+    "naver_blog": {
+      "frequency": "3 times per week",
+      "schedule": ["월", "수", "금"],
+      "preferred_times": ["09:00", "14:00", "19:00"],
+      "content_type": "professional expert-level",
+      "image_required": true,
+      "midjourney_integration": true,
+      "target_length": "1500-2000 characters",
+      "seo_optimization": true,
+      "persona": "professional investment blogger"
+    },
+    "tistory": {
+      "frequency": "daily",
+      "schedule": "every day",
+      "preferred_times": ["19:00"],
+      "content_type": "natural personal blog",
+      "image_required": true,
+      "midjourney_integration": true,
+      "target_length": "800-1200 characters",
+      "upload_method": "HTML manual upload",
+      "persona": "casual personal blogger"
+    }
+  },
+  "satellite_platforms": {
+    "dcinside": {
+      "frequency": "every 3-4 minutes",
+      "cooldown": 0.05,
+      "daily_limit": 300,
+      "content_type": "anonymous mass posting",
+      "stealth_level": "maximum",
+      "boards": ["암호화폐갤", "자유게시판", "투자갤"],
+      "persona": "anonymous dc user",
+      "posting_style": "casual, short, impactful"
+    },
+    "ilbe": {
+      "frequency": "every 20-30 minutes",
+      "cooldown": 0.33,
+      "daily_limit": 48,
+      "content_ratio": "3:1 (normal:bithumb)",
+      "stealth_level": "maximum",
+      "content_types": ["추천코드", "링크", "블로그링크"],
+      "persona": "regular ilbe user",
+      "posting_style": "blend in with community culture"
+    },
+    "ppomppu": {
+      "frequency": "every 30-60 minutes",
+      "cooldown": 0.75,
+      "daily_limit": 24,
+      "content_ratio": "3:1 (normal:bithumb)",
+      "stealth_level": "maximum",
+      "content_types": ["추천코드", "링크", "블로그링크"],
+      "persona": "deal hunter",
+      "posting_style": "benefit-focused, value proposition"
+    }
+  },
+  "content_guidelines": {
+    "anchor_content": {
+      "quality": "expert-level",
+      "ai_detection": "minimize AI-like patterns",
+      "structure": "도입부 → 핵심정보 → 경험담 → CTA",
+      "image_integration": "midjourney + canva",
+      "seo_keywords": ["빗썸 추천인", "빗썸 이벤트", "7만원 지급", "가상자산 초대코드"]
+    },
+    "satellite_content": {
+      "stealth_priority": "maximum",
+      "promotion_visibility": "완전 위장",
+      "natural_integration": "community culture adaptation",
+      "variation_required": true,
+      "tracking": "full activity logging"
+    }
+  },
+  "safety_measures": {
+    "ip_rotation": true,
+    "user_agent_rotation": true,
+    "human_behavior_simulation": true,
+    "account_cooldown": true,
+    "spam_detection_avoidance": true,
+    "emergency_stop": "slack integration"
+  }
+}
