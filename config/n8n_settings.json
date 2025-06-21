@@ -1,0 +1,51 @@
+{
+  "bithumb_campaign": {
+    "project_info": {
+      "name": "bithumb-campaign",
+      "version": "1.0",
+      "last_updated": "2025-06-21"
+    },
+    "referral": {
+      "code": "W1HGATYGVW",
+      "link": "https://m.bithumb.com/react/referral/guide?referral=W1HGATYGVW"
+    },
+    "targets": {
+      "daily": 50,
+      "weekly": 300,
+      "monthly": 1000,
+      "conversion_rate": 0.15
+    },
+    "platforms": {
+      "blog_url": "https://blog.naver.com/majang0-",
+      "github_repo": "https://github.com/majang0/bithumb-campaign",
+      "active_platforms": [
+        "naver_blog",
+        "dcinside", 
+        "clien",
+        "ppomppu",
+        "instiz",
+        "everytime"
+      ]
+    },
+    "automation": {
+      "interval_minutes": 3,
+      "execution_probability": 0.5,
+      "daily_post_limit": 20,
+      "rest_hours": [2, 3, 4, 5, 6]
+    },
+    "content_strategy": {
+      "anchor_frequency": "2_per_week",
+      "satellite_frequency": "hourly",
+      "platforms_per_cycle": 1,
+      "rest_period_hours": 1
+    },
+    "monitoring": {
+      "slack_webhook": "YOUR_SLACK_WEBHOOK_URL",
+      "report_frequency": "daily",
+      "alert_thresholds": {
+        "error_rate": 0.1,
+        "success_rate": 0.8
+      }
+    }
+  }
+}
